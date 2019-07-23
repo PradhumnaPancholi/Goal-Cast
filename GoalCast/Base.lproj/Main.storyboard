@@ -18,12 +18,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tpz-aJ-kjl">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="98" id="tpz-aJ-kjl">
+                                <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpz-aJ-kjl" id="iy9-qn-a6C">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="97.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CF-Dy-pGW">
+                                            <rect key="frame" x="28" y="21" width="374" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0w-M2-SVh">
+                                            <rect key="frame" x="330.5" y="74" width="71.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9CF-Dy-pGW" firstAttribute="leading" secondItem="iy9-qn-a6C" secondAttribute="leadingMargin" constant="8" id="jKL-RW-IbZ"/>
+                                        <constraint firstItem="9CF-Dy-pGW" firstAttribute="trailing" secondItem="iy9-qn-a6C" secondAttribute="trailingMargin" constant="8" id="mlh-Lg-XFX"/>
+                                        <constraint firstItem="G0w-M2-SVh" firstAttribute="bottom" secondItem="iy9-qn-a6C" secondAttribute="bottomMargin" constant="8" id="oJX-JS-qcl"/>
+                                        <constraint firstItem="9CF-Dy-pGW" firstAttribute="top" secondItem="iy9-qn-a6C" secondAttribute="topMargin" constant="10" id="spP-I7-quG"/>
+                                        <constraint firstItem="G0w-M2-SVh" firstAttribute="trailing" secondItem="iy9-qn-a6C" secondAttribute="trailingMargin" constant="8" id="uva-Zs-rzj"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -32,7 +53,11 @@
                             <outlet property="delegate" destination="IhT-If-tAG" id="teJ-GC-sk1"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="All Tasks" id="1zI-i5-4LA"/>
+                    <navigationItem key="navigationItem" title="All Tasks" id="1zI-i5-4LA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TQ7-7R-FLd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNF-gM-mVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -43,12 +68,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gmg-ON-67g" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Plt-Mo-agB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="Plt-Mo-agB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.048047877849999997" green="0.14549413319999999" blue="0.2499878109" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="32"/>

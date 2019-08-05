@@ -13,6 +13,8 @@
 		9F17B2E922E69971009F357A /* GoalCast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B2E722E69971009F357A /* GoalCast.xcdatamodeld */; };
 		9F17B2EB22E69973009F357A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F17B2EA22E69973009F357A /* Assets.xcassets */; };
 		9F17B2EE22E69973009F357A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F17B2EC22E69973009F357A /* LaunchScreen.storyboard */; };
+		9F95C77822F7A40100EDD9C6 /* CreateNewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95C77622F7A40100EDD9C6 /* CreateNewTaskVC.swift */; };
+		9F95C77922F7A40100EDD9C6 /* CreateNewTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9F17B2EA22E69973009F357A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F17B2ED22E69973009F357A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F17B2EF22E69973009F357A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F95C77622F7A40100EDD9C6 /* CreateNewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTaskVC.swift; sourceTree = "<group>"; };
+		9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewTaskVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		9F17B2DF22E69971009F357A /* GoalCast */ = {
 			isa = PBXGroup;
 			children = (
+				9F95C77522F7A3A300EDD9C6 /* XIBFiles */,
 				9F17B2E022E69971009F357A /* AppDelegate.swift */,
 				9F17B2E222E69971009F357A /* ViewController.swift */,
 				9F17B2E422E69971009F357A /* Main.storyboard */,
@@ -63,8 +68,17 @@
 				9F17B2EC22E69973009F357A /* LaunchScreen.storyboard */,
 				9F17B2EF22E69973009F357A /* Info.plist */,
 				9F17B2E722E69971009F357A /* GoalCast.xcdatamodeld */,
+				9F95C77622F7A40100EDD9C6 /* CreateNewTaskVC.swift */,
 			);
 			path = GoalCast;
+			sourceTree = "<group>";
+		};
+		9F95C77522F7A3A300EDD9C6 /* XIBFiles */ = {
+			isa = PBXGroup;
+			children = (
+				9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */,
+			);
+			path = XIBFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,7 @@
 			files = (
 				9F17B2EE22E69973009F357A /* LaunchScreen.storyboard in Resources */,
 				9F17B2EB22E69973009F357A /* Assets.xcassets in Resources */,
+				9F95C77922F7A40100EDD9C6 /* CreateNewTaskVC.xib in Resources */,
 				9F17B2E622E69971009F357A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +155,7 @@
 			files = (
 				9F17B2E922E69971009F357A /* GoalCast.xcdatamodeld in Sources */,
 				9F17B2E322E69971009F357A /* ViewController.swift in Sources */,
+				9F95C77822F7A40100EDD9C6 /* CreateNewTaskVC.swift in Sources */,
 				9F17B2E122E69971009F357A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -40,4 +40,5 @@ class AllTasksVC: UITableViewController {
         present(newTaskModal, animated: true, completion: nil)
     }
     
+    
 }

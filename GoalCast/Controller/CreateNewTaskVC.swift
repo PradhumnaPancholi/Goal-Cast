@@ -15,6 +15,7 @@ class CreateNewTaskVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        readData()
         createData()
 
         // Do any additional setup after loading the view.
@@ -47,10 +48,27 @@ class CreateNewTaskVC: UIViewController {
         } catch let error as NSError {
             print("Could not save. \(error)")
         }
-
         
         
     }
+    
+    func readData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Task")
+        
+        do {
+            tasks = try managedContext.fetch(fetchRequest)
+            let task = tasks[0]
+            print(task.value(forKey: "title"))
+            print(task)
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+    
+    }
+    
     
     /*
     // MARK: - Navigation

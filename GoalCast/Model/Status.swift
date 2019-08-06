@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum Status {
-    case DELETED
-    case COMPLETED 
-    case ACTIVE
+enum Status : String {
+    case DELETED = "DELETED"
+    case COMPLETED = "COMPLETED"
+    case ACTIVE = "ACTIVE"
 }

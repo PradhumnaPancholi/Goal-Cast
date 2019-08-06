@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateNewTaskVC" customModule="GoalCast" customModuleProvider="target">
             <connections>
+                <outlet property="detailsTextField" destination="ghN-sO-bzZ" id="bip-md-XfF"/>
+                <outlet property="priorityTextField" destination="TDZ-z2-xZh" id="zS0-uZ-pPe"/>
+                <outlet property="titleTextField" destination="P42-1Z-uoS" id="DiV-Sw-sNJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -48,7 +51,7 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-sO-bzZ">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter details" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghN-sO-bzZ">
                                     <rect key="frame" x="0.0" y="87" width="238" height="33"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -67,6 +70,9 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="18"/>
                             <state key="normal" title="Create Task"/>
+                            <connections>
+                                <action selector="createTask:" destination="-1" eventType="touchUpInside" id="XEF-kK-VXk"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQp-x3-gjq">
                             <rect key="frame" x="298" y="16" width="20" height="20"/>

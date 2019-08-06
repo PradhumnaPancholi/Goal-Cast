@@ -8,20 +8,20 @@
 
 import Foundation
 
-class Tasksdasd {
+class TaskDao {
     
     var title : String
-    var description: String
+    var detail: String
     var dueDate: Date
-    var priority: Priority
-    var isCompleted: Bool
+    var priority: String
+    var status: String
     
-    init(title: String, description: String, dueDate: Date, priority: Priority, isCompleted: Bool) {
+    init(title: String, detail: String, dueDate: Date, priority: String, status: String) {
         self.title = title
-        self.description = description
+        self.detail = detail
         self.dueDate = dueDate
         self.priority = priority
-        self.isCompleted = isCompleted
+        self.status = status
     }
     
 }

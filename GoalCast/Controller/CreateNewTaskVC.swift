@@ -11,12 +11,15 @@ import CoreData
 
 class CreateNewTaskVC: UIViewController {
 
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var priorityTextField: UITextField!
+    @IBOutlet weak var detailsTextField: UITextField!
+    
     var tasks : [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        readData()
-        createData()
+        //readData()
 
         // Do any additional setup after loading the view.
     }
@@ -25,13 +28,23 @@ class CreateNewTaskVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func addNewTask() {
+    func addNewTask(task: TaskDao) {
+        print("")
         print("Add task")
     }
     
-//    TEMPORARY
-    func createData() {
-        print("dsad")
+    @IBAction func createTask(_ sender: Any) {
+        let moderate = Priority.MODERATE
+        let task = TaskDao(title: titleTextField.text!,
+                           detail: detailsTextField.text!,
+                           dueDate: Date(),
+                           priority: Priority.LOW.rawValue,
+                           status: moderate.rawValue)
+        addTaskToCoreData(taskDao: task)
+    }
+    
+    //    TEMPORARY
+    func addTaskToCoreData(taskDao: TaskDao) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -39,8 +52,11 @@ class CreateNewTaskVC: UIViewController {
         let taskEntity = NSEntityDescription.entity(forEntityName: "Task", in: managedContext)!
         
         let task = NSManagedObject(entity: taskEntity, insertInto: managedContext)
-        task.setValue("Groceries", forKeyPath: "title")
-        task.setValue("Go for groceries in no frills", forKeyPath: "detail")
+        task.setValue(taskDao.title , forKeyPath: "title")
+        task.setValue(taskDao.detail , forKeyPath: "detail")
+        task.setValue(taskDao.dueDate , forKeyPath: "dueDate")
+        task.setValue(taskDao.priority, forKey: "priority")
+        task.setValue(taskDao.status , forKey: "status")
         
         do {
             try managedContext.save()
@@ -49,6 +65,7 @@ class CreateNewTaskVC: UIViewController {
             print("Could not save. \(error)")
         }
         
+        readData()
         
     }
     
@@ -60,9 +77,9 @@ class CreateNewTaskVC: UIViewController {
         
         do {
             tasks = try managedContext.fetch(fetchRequest)
-            let task = tasks[0]
-            print(task.value(forKey: "title"))
-            print(task)
+//            let task = tasks[0]
+//            print(task.(forKey: "title"))
+            print(tasks)
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }

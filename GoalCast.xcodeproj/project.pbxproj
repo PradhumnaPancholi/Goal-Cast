@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		287BB43122FA128300E0BB3F /* TaskDSOai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BB43022FA128300E0BB3F /* TaskDSOai.swift */; };
+		287BB43122FA128300E0BB3F /* TaskDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BB43022FA128300E0BB3F /* TaskDao.swift */; };
 		287BB43322FA138100E0BB3F /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BB43222FA138100E0BB3F /* Priority.swift */; };
 		287BB43522FA144100E0BB3F /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287BB43422FA144100E0BB3F /* Status.swift */; };
 		9F17B2E122E69971009F357A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17B2E022E69971009F357A /* AppDelegate.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		287BB43022FA128300E0BB3F /* TaskDSOai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDSOai.swift; sourceTree = "<group>"; };
+		287BB43022FA128300E0BB3F /* TaskDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDao.swift; sourceTree = "<group>"; };
 		287BB43222FA138100E0BB3F /* Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Priority.swift; sourceTree = "<group>"; };
 		287BB43422FA144100E0BB3F /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		9F17B2DD22E69971009F357A /* GoalCast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoalCast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +50,7 @@
 		287BB42F22FA126C00E0BB3F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				287BB43022FA128300E0BB3F /* TaskDSOai.swift */,
+				287BB43022FA128300E0BB3F /* TaskDao.swift */,
 				287BB43222FA138100E0BB3F /* Priority.swift */,
 				287BB43422FA144100E0BB3F /* Status.swift */,
 			);
@@ -181,7 +181,7 @@
 				9F17B2E922E69971009F357A /* GoalCast.xcdatamodeld in Sources */,
 				9F95C77822F7A40100EDD9C6 /* CreateNewTaskVC.swift in Sources */,
 				287BB43522FA144100E0BB3F /* Status.swift in Sources */,
-				287BB43122FA128300E0BB3F /* TaskDSOai.swift in Sources */,
+				287BB43122FA128300E0BB3F /* TaskDao.swift in Sources */,
 				9F17B2E122E69971009F357A /* AppDelegate.swift in Sources */,
 				9FBA4C6222F8DB3900EA4D62 /* AllTasksVC.swift in Sources */,
 				287BB43322FA138100E0BB3F /* Priority.swift in Sources */,

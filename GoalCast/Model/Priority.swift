@@ -8,8 +8,10 @@
 
 import Foundation
 
-enum Priority {
-    case LOW
-    case MODERATE
-    case URGENT
+enum Priority : String {
+    
+    case LOW = "LOW"
+    case MODERATE = "MODERATE"
+    case URGENT = "URGENT"
+
 }

@@ -19,6 +19,7 @@
 		9F95C77922F7A40100EDD9C6 /* CreateNewTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */; };
 		9FBA4C6222F8DB3900EA4D62 /* AllTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA4C6122F8DB3900EA4D62 /* AllTasksVC.swift */; };
 		F0B040F922FABBCC0094C915 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B040F822FABBCC0094C915 /* StringExtension.swift */; };
+		F0B040FB22FAE2940094C915 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B040FA22FAE2940094C915 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewTaskVC.xib; sourceTree = "<group>"; };
 		9FBA4C6122F8DB3900EA4D62 /* AllTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksVC.swift; sourceTree = "<group>"; };
 		F0B040F822FABBCC0094C915 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F0B040FA22FAE2940094C915 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				9F95C77622F7A40100EDD9C6 /* CreateNewTaskVC.swift */,
 				9FBA4C6122F8DB3900EA4D62 /* AllTasksVC.swift */,
+				F0B040FA22FAE2940094C915 /* TaskTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				F0B040F922FABBCC0094C915 /* StringExtension.swift in Sources */,
 				9F17B2E122E69971009F357A /* AppDelegate.swift in Sources */,
 				9FBA4C6222F8DB3900EA4D62 /* AllTasksVC.swift in Sources */,
+				F0B040FB22FAE2940094C915 /* TaskTableViewCell.swift in Sources */,
 				287BB43322FA138100E0BB3F /* Priority.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,7 +23,6 @@ class AllTasksVC: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         fetchData()
     }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,7 +36,7 @@ class AllTasksVC: UITableViewController {
     }
 
     
-    @IBAction func addTaskPressed(_ sender: UIBarButtonItem) {
+func addTaskPressed(_ sender: UIBarButtonItem) {
         let newTaskModal = CreateNewTaskVC()
         newTaskModal.modalPresentationStyle = .overCurrentContext
         present(newTaskModal, animated: true, completion: nil)

@@ -23,6 +23,8 @@ class CreateNewTaskVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
     
     let datePickerView = UIDatePicker()
     
+    private let persistentContainer = NSPersistentContainer(name: "Task")
+    
     var tasks : [NSManagedObject] = []
     
     override func viewDidLoad() {
@@ -117,13 +119,10 @@ class CreateNewTaskVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         
         do {
             try managedContext.save()
-            print("Saved")
         } catch let error as NSError {
             print("Could not save. \(error)")
         }
-        
         readData()
-        
     }
     
     func readData() {
@@ -138,7 +137,6 @@ class CreateNewTaskVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
         }
-    
     }
     
     func preparePickerViews() {

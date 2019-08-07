@@ -16,6 +16,15 @@ class TaskDao {
     var priority: String
     var status: String
     
+    static var priorities = [
+        "Hey",
+        "hello",
+        "Sup"
+//        Priority.LOW.rawValue,
+//        Priority.MODERATE.rawValue,
+//        Priority.URGENT.rawValue
+    ]
+    
     init(title: String, detail: String, dueDate: Date, priority: String, status: String) {
         self.title = title
         self.detail = detail

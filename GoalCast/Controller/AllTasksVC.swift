@@ -34,7 +34,6 @@ class AllTasksVC: UITableViewController {
 
     
     @IBAction func addTaskPressed(_ sender: UIBarButtonItem) {
-        
         let newTaskModal = CreateNewTaskVC()
         newTaskModal.modalPresentationStyle = .overCurrentContext
         present(newTaskModal, animated: true, completion: nil)

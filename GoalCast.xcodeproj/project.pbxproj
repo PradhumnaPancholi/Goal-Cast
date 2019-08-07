@@ -18,6 +18,7 @@
 		9F95C77822F7A40100EDD9C6 /* CreateNewTaskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F95C77622F7A40100EDD9C6 /* CreateNewTaskVC.swift */; };
 		9F95C77922F7A40100EDD9C6 /* CreateNewTaskVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */; };
 		9FBA4C6222F8DB3900EA4D62 /* AllTasksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA4C6122F8DB3900EA4D62 /* AllTasksVC.swift */; };
+		F0B040F922FABBCC0094C915 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B040F822FABBCC0094C915 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9F95C77622F7A40100EDD9C6 /* CreateNewTaskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewTaskVC.swift; sourceTree = "<group>"; };
 		9F95C77722F7A40100EDD9C6 /* CreateNewTaskVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateNewTaskVC.xib; sourceTree = "<group>"; };
 		9FBA4C6122F8DB3900EA4D62 /* AllTasksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTasksVC.swift; sourceTree = "<group>"; };
+		F0B040F822FABBCC0094C915 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				287BB43022FA128300E0BB3F /* TaskDao.swift */,
 				287BB43222FA138100E0BB3F /* Priority.swift */,
 				287BB43422FA144100E0BB3F /* Status.swift */,
+				F0B040F822FABBCC0094C915 /* StringExtension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				9F95C77822F7A40100EDD9C6 /* CreateNewTaskVC.swift in Sources */,
 				287BB43522FA144100E0BB3F /* Status.swift in Sources */,
 				287BB43122FA128300E0BB3F /* TaskDao.swift in Sources */,
+				F0B040F922FABBCC0094C915 /* StringExtension.swift in Sources */,
 				9F17B2E122E69971009F357A /* AppDelegate.swift in Sources */,
 				9FBA4C6222F8DB3900EA4D62 /* AllTasksVC.swift in Sources */,
 				287BB43322FA138100E0BB3F /* Priority.swift in Sources */,

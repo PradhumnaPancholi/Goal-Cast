@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class AllTasksVC: UITableViewController {
+    
+    var tasksList : [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,7 @@ class AllTasksVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        fetchData()
     }
 
     // MARK: - Table view data source
@@ -37,6 +41,24 @@ class AllTasksVC: UITableViewController {
         let newTaskModal = CreateNewTaskVC()
         newTaskModal.modalPresentationStyle = .overCurrentContext
         present(newTaskModal, animated: true, completion: nil)
+    }
+    
+    func fetchData() {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Task")
+        
+        do {
+            tasksList = try managedContext.fetch(fetchRequest)
+            print(tasksList)
+            for data in tasksList{
+                print(data.value(forKey: "title"))
+            }
+        } catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
     }
     
     

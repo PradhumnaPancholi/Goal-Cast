@@ -122,7 +122,7 @@ class CreateNewTaskVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
             print("Could not save. \(error)")
         }
         
-        readData()
+        //readData()
         
     }
     

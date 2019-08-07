@@ -100,6 +100,8 @@ class CreateNewTaskVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataS
                            priority: self.priorityTextField.text!,
                            status: Status.ACTIVE.rawValue)
         addTaskToCoreData(taskDao: task)
+        self.dismiss(animated: true, completion: nil)
+        
     }
     
     //    TEMPORARY

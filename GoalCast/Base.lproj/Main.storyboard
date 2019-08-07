@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCell" rowHeight="98" id="tpz-aJ-kjl" customClass="TaskTableViewCell" customModule="GoalCast" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="98" id="tpz-aJ-kjl" customClass="TaskCell" customModule="GoalCast" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="98"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tpz-aJ-kjl" id="iy9-qn-a6C">
@@ -37,15 +37,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh8-9d-yBu">
-                                            <rect key="frame" x="28" y="49" width="50" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="9CF-Dy-pGW" firstAttribute="top" secondItem="iy9-qn-a6C" secondAttribute="topMargin" constant="8" id="8I3-5d-JCs"/>
+                                        <constraint firstItem="9CF-Dy-pGW" firstAttribute="leading" secondItem="iy9-qn-a6C" secondAttribute="leadingMargin" constant="8" id="gNJ-tu-Hr6"/>
                                         <constraint firstItem="9CF-Dy-pGW" firstAttribute="leading" secondItem="iy9-qn-a6C" secondAttribute="leadingMargin" constant="8" id="jKL-RW-IbZ"/>
                                         <constraint firstItem="9CF-Dy-pGW" firstAttribute="trailing" secondItem="iy9-qn-a6C" secondAttribute="trailingMargin" constant="8" id="mlh-Lg-XFX"/>
                                         <constraint firstItem="G0w-M2-SVh" firstAttribute="bottom" secondItem="iy9-qn-a6C" secondAttribute="bottomMargin" constant="8" id="oJX-JS-qcl"/>
@@ -53,6 +48,10 @@
                                         <constraint firstItem="G0w-M2-SVh" firstAttribute="trailing" secondItem="iy9-qn-a6C" secondAttribute="trailingMargin" constant="8" id="uva-Zs-rzj"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dueDateLabel" destination="G0w-M2-SVh" id="BhA-kl-S6Y"/>
+                                    <outlet property="taskTitle" destination="9CF-Dy-pGW" id="SxO-av-b5O"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,10 +63,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TQ7-7R-FLd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="addTaskPressed:" destination="IhT-If-tAG" id="o5R-xn-Zlv"/>
+                                <action selector="createTask:" destination="IhT-If-tAG" id="gpC-qY-dxu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="createButton" destination="TQ7-7R-FLd" id="rgN-eb-sXW"/>
+                        <outlet property="tasksTable" destination="MtN-sW-WsF" id="dxc-8L-jJG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oNF-gM-mVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

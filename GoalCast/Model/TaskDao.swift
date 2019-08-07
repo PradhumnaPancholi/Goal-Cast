@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class TaskDao {
     
@@ -29,5 +30,6 @@ class TaskDao {
         self.priority = priority
         self.status = status
     }
+
     
 }
